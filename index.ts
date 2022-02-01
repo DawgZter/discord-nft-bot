@@ -231,7 +231,7 @@ const messageEmbed = async (tokenId: number, log: Log) => {
 
   return new MessageEmbed()
     .setColor('#5296d5')
-    .setTitle(`${TOKEN_NAME} #${tokenId}`)
+    .setTitle(`#${assetName} #${tokenId}`)
     .setURL(opensea.permalink(tokenId))
     .setFields(fields)
     .setImage(asset.image_original_url)
