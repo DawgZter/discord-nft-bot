@@ -229,6 +229,14 @@ const messageEmbed = async (tokenId: number, log: Log) => {
     }
   }
 
+  let assetName = asset.name
+    if (!assetName) {
+      if (asset.asset_contract.name) {
+        assetName = `${asset.asset_contract.name} `
+      }
+      assetName += `#${asset.token_id}`
+    }
+  
   return new MessageEmbed()
     .setColor('#5296d5')
     .setTitle(`#${assetName} #${tokenId}`)
