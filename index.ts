@@ -247,7 +247,7 @@ const messageEmbed = async (tokenId: number, log: Log) => {
 
 const matches = async (message: any, log: Log) => {
   const matches = []
-  const regex = /#(\d*|\w*.eth|\w*|random)(\s|\n|\W|$)/g
+  const regex = /^!yat #(\d*|\w*.eth|\w*|random)(\s|\n|\W|$)/g
 
   let match = regex.exec(message.content)
   if (match !== null) {
